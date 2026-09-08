@@ -13,9 +13,9 @@ export interface PersonalData {
 
 export const personalData: PersonalData = {
   fullName: "Rohit Ranjan Kumar",
-  tagline: "B.Tech CSE Student | Data Science & Data Engineering",
+  tagline: "Data Scientist | OCI 2025 AI Foundations Associate | AI",
   shortBio:
-    "B.Tech Computer Science and Engineering student at Lovely Professional University specializing in Data Science, Data Engineering and AI Systems.",
+    "Bachelor of Technology (Honours) in Computer Science and Engineering student at Lovely Professional University specializing in Data Science, Data Engineering and AI",
   email: "rohitkashyap3009@gmail.com",
   phone: "+91-9470613572",
   location: "Punjab / Bihar, India",

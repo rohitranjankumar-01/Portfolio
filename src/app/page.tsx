@@ -50,10 +50,10 @@ export default function Home() {
     },
     {
       title: "CV / RESUME",
-      desc: "Curriculum Vitae documentation status and direct credential inquiry options.",
+      desc: "Official Curriculum Vitae document with interactive high-resolution viewer and download.",
       icon: <FileText className="w-6 h-6 text-[#38BDF8]" />,
       href: "/resume",
-      badge: "Profile Doc",
+      badge: "Verified CV",
     },
   ];
 

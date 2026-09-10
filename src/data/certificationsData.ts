@@ -61,6 +61,15 @@ export const certificationsData: CertificationEntry[] = [
     isProctored: true,
   },
   {
+    id: "cert-cp",
+    title: "Computer Programming",
+    issuer: "Lovely Professional University / iamneo",
+    date: "May 2025",
+    category: "Certificates",
+    imagePath: "/Image/ComputerProgramming.jpg",
+    isProctored: true,
+  },
+  {
     id: "cert-5",
     title: "Data Management (Excel and Tableau)",
     issuer: "Tech Veda",

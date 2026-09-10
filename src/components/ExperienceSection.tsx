@@ -16,7 +16,7 @@ export default function ExperienceSection() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-5xl font-orbitron font-extrabold text-[#E2E8F0] tracking-tight"
           >
-            WORK <span className="text-[#38BDF8]">EXPERIENCE</span>
+            WORK & <span className="text-[#38BDF8]">TRAINING</span>
           </motion.h1>
           <div className="w-20 h-1 bg-gradient-to-r from-[#0284C7] to-[#38BDF8] mx-auto mt-4 rounded-full" />
         </div>

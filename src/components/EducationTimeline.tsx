@@ -227,28 +227,29 @@ export default function EducationTimeline() {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#1C2E4A]">
-              <div className="flex items-center gap-2">
-                <FileText className="w-5 h-5 text-[#38BDF8]" />
-                <span className="font-orbitron font-bold text-white text-sm">
-                  {selectedMarksheet.title} — Official Marksheet
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-[#1C2E4A]">
+              <div className="flex items-center gap-2 overflow-hidden mr-2">
+                <FileText className="w-5 h-5 text-[#38BDF8] shrink-0" />
+                <span className="font-orbitron font-bold text-white text-xs sm:text-sm truncate">
+                  {selectedMarksheet.title} — Marksheet
                 </span>
                 {selectedMarksheet.images.length > 1 && (
-                  <span className="text-xs font-mono text-[#7E92AB] ml-2">
-                    Page {selectedMarksheet.page + 1} of {selectedMarksheet.images.length}
+                  <span className="text-[11px] font-mono text-[#7E92AB] shrink-0 ml-1">
+                    ({selectedMarksheet.page + 1}/{selectedMarksheet.images.length})
                   </span>
                 )}
               </div>
               <button
                 onClick={closeMarksheet}
-                className="p-2 rounded-full bg-[#111D30] border border-[#1C2E4A] text-slate-300 hover:text-white hover:border-[#38BDF8] transition-all"
+                className="p-1.5 sm:p-2 rounded-full bg-[#111D30] border border-[#1C2E4A] text-slate-300 hover:text-white hover:border-[#38BDF8] transition-all shrink-0 cursor-pointer"
+                aria-label="Close Marksheet"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 
             {/* Image Display */}
-            <div className="relative w-full bg-[#111D30]" style={{ minHeight: "70vh" }}>
+            <div className="relative w-full bg-[#111D30] h-[55vh] sm:h-[70vh]">
               <Image
                 src={selectedMarksheet.images[selectedMarksheet.page]}
                 alt={`${selectedMarksheet.title} marksheet page ${selectedMarksheet.page + 1}`}

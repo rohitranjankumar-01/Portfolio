@@ -40,6 +40,7 @@ export const skillsData: SkillCategory[] = [
       "Team Player",
       "Time Management",
       "Problem Solving",
+      "Communication",
     ],
   },
 ];

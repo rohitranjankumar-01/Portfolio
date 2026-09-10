@@ -16,7 +16,7 @@ import ProjectLiveFrame from "./ProjectLiveFrame";
 const domains: Array<"All" | ProjectDomain> = [
   "All",
   "Web & Full-Stack",
-  "AI, Agents & NLP",
+  "AI & AI Agents",
   "Data Science & Analytics",
   "Systems & Security",
 ];

@@ -51,30 +51,30 @@ export default function SkillsHud() {
           className="glass-card rounded-2xl border border-[#38BDF8]/30 overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.06)]"
         >
           {/* Terminal Window Titlebar */}
-          <div className="px-6 py-3 bg-[#111D30] border-b border-[#1C2E4A] flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500/80" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-              <div className="w-3 h-3 rounded-full bg-green-500/80" />
-              <span className="ml-3 font-mono text-xs text-[#7E92AB]">
+          <div className="px-4 sm:px-6 py-3 bg-[#111D30] border-b border-[#1C2E4A] flex items-center justify-between">
+            <div className="flex items-center gap-2 overflow-hidden">
+              <div className="w-3 h-3 rounded-full bg-red-500/80 shrink-0" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80 shrink-0" />
+              <div className="w-3 h-3 rounded-full bg-green-500/80 shrink-0" />
+              <span className="ml-2 sm:ml-3 font-mono text-[11px] sm:text-xs text-[#7E92AB] truncate">
                 rohit@system-hud:~ /skills --interactive
               </span>
             </div>
-            <div className="hidden sm:flex items-center gap-2 text-[11px] font-mono text-[#38BDF8]">
+            <div className="hidden sm:flex items-center gap-2 text-[11px] font-mono text-[#38BDF8] shrink-0">
               <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
               <span>HUD ONLINE</span>
             </div>
           </div>
 
           {/* Interactive HUD Content */}
-          <div className="p-6 sm:p-8">
+          <div className="p-4 sm:p-8">
             {/* Category Nav Tabs */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 mb-6 sm:mb-8">
               {skillsData.map((cat, idx) => (
                 <button
                   key={cat.categoryName}
                   onClick={() => setActiveTab(idx)}
-                  className={`p-3 rounded-xl border text-xs font-orbitron text-left transition-all flex items-center gap-2.5 cursor-pointer ${
+                  className={`p-3 rounded-xl border text-xs font-orbitron text-left transition-all flex items-center gap-2.5 cursor-pointer min-h-[44px] ${
                     activeTab === idx
                       ? "bg-[#38BDF8]/10 border-[#38BDF8] text-[#38BDF8] shadow-[0_0_15px_rgba(56,189,248,0.2)]"
                       : "bg-[#111D30] border-[#1C2E4A] text-[#7E92AB] hover:border-[#38BDF8]/40 hover:text-white"
@@ -87,10 +87,10 @@ export default function SkillsHud() {
             </div>
 
             {/* Selected Category Skill Matrix */}
-            <div className="min-h-[160px] bg-[#0B1320] rounded-xl border border-[#1C2E4A] p-6 relative overflow-hidden">
-              <div className="text-xs font-mono text-[#7E92AB] mb-4 flex items-center justify-between">
+            <div className="min-h-[160px] bg-[#0B1320] rounded-xl border border-[#1C2E4A] p-4 sm:p-6 relative overflow-hidden">
+              <div className="text-xs font-mono text-[#7E92AB] mb-4 flex flex-col sm:flex-row gap-1 sm:items-center sm:justify-between">
                 <span>CATEGORY: {skillsData[activeTab].categoryName.toUpperCase()}</span>
-                <span>[{skillsData[activeTab].skills.length} MODULES LOADED]</span>
+                <span className="text-[11px] text-sky-400 sm:text-[#7E92AB]">[{skillsData[activeTab].skills.length} MODULES LOADED]</span>
               </div>
 
               <div className="flex flex-wrap gap-3">

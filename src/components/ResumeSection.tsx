@@ -312,21 +312,21 @@ export default function ResumeSection() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Top Control Bar */}
-              <div className="flex items-center justify-between px-6 py-3.5 bg-[#111D30] border-b border-[#1C2E4A]">
-                <div className="flex items-center gap-3">
-                  <FileText className="w-5 h-5 text-[#38BDF8]" />
-                  <div>
-                    <h3 className="text-sm font-orbitron font-bold text-[#E2E8F0]">
-                      {personalData.fullName} - Curriculum Vitae
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-[#111D30] border-b border-[#1C2E4A]">
+                <div className="flex items-center gap-2 sm:gap-3 overflow-hidden mr-2">
+                  <FileText className="w-5 h-5 text-[#38BDF8] shrink-0" />
+                  <div className="overflow-hidden">
+                    <h3 className="text-xs sm:text-sm font-orbitron font-bold text-[#E2E8F0] truncate max-w-[130px] sm:max-w-xs md:max-w-none">
+                      {personalData.fullName} - CV
                     </h3>
-                    <p className="text-[11px] font-mono text-[#7E92AB]">
+                    <p className="text-[10px] sm:text-[11px] font-mono text-[#7E92AB]">
                       Zoom: {Math.round(zoomLevel * 100)}%
                     </p>
                   </div>
                 </div>
 
                 {/* Toolbar buttons */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 sm:gap-2 shrink-0">
                   <button
                     onClick={handleZoomIn}
                     aria-label="Zoom in"

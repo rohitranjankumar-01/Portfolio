@@ -1,20 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowDown, Sparkles, Terminal, ChevronRight } from "lucide-react";
+import { ArrowDown, Terminal, ChevronRight } from "lucide-react";
 import { personalData } from "@/data/personalData";
-import { useTextMetrics } from "@/hooks/useTextMetrics";
 
 export default function HeroScrollCanvas() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const { measureText } = useTextMetrics();
-  const [metricsSummary, setMetricsSummary] = useState<{ width: number; height: number }>({
-    width: 0,
-    height: 0,
-  });
 
   // High-DPI Canvas Particle Grid Animation
   useEffect(() => {
@@ -117,12 +111,6 @@ export default function HeroScrollCanvas() {
     };
   }, []);
 
-  // Compute pretext-style text metrics for layout safety
-  useEffect(() => {
-    const res = measureText(personalData.tagline, "700 24px Orbitron", 600);
-    setMetricsSummary({ width: Math.round(res.width), height: Math.round(res.height) });
-  }, [measureText]);
-
   return (
     <section
       id="hero"
@@ -136,20 +124,20 @@ export default function HeroScrollCanvas() {
         className="absolute inset-0 w-full h-full pointer-events-none z-0"
       />
 
-      {/* Radial Gradient Ambient Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#38BDF8]/8 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-[#0284C7]/12 rounded-full blur-[160px] pointer-events-none" />
+      {/* Radial Gradient Ambient Glows (constrain max width to prevent mobile overflow) */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] max-w-[85vw] h-[600px] bg-[#38BDF8]/8 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-5 sm:right-10 w-[450px] max-w-[85vw] h-[450px] bg-[#0284C7]/12 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
 
-        {/* Main Name Heading */}
+        {/* Main Name Heading - Responsive for compact phones and 4K displays */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl sm:text-6xl md:text-7xl font-orbitron font-extrabold tracking-tight text-white mb-4 leading-tight"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-orbitron font-extrabold tracking-tight text-white mb-4 leading-tight break-words"
         >
           ROHIT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] via-sky-200 to-[#0284C7] text-glow-cyan">RANJAN KUMAR</span>
         </motion.h1>
@@ -159,9 +147,9 @@ export default function HeroScrollCanvas() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-2xl text-lg sm:text-xl font-rajdhani font-semibold text-sky-200/90 mb-6 flex items-center justify-center gap-2 flex-wrap"
+          className="max-w-2xl text-base sm:text-xl font-rajdhani font-semibold text-sky-200/90 mb-6 flex items-center justify-center gap-2 flex-wrap px-2"
         >
-          <Terminal className="w-5 h-5 text-[#38BDF8]" />
+          <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-[#38BDF8] shrink-0" />
           <span>{personalData.tagline}</span>
         </motion.div>
 
@@ -170,28 +158,28 @@ export default function HeroScrollCanvas() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-3xl text-sm sm:text-base text-[#7E92AB] font-normal leading-relaxed mb-10"
+          className="max-w-3xl text-xs sm:text-base text-[#7E92AB] font-normal leading-relaxed mb-10 px-2"
         >
           {personalData.shortBio}
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons - Mobile full-width / PC inline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-4"
+          className="w-full sm:w-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 sm:px-0"
         >
           <Link
             href="/projects"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_25px_rgba(56,189,248,0.3)] flex items-center gap-2"
+            className="w-full sm:w-auto min-h-[44px] px-6 py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_25px_rgba(56,189,248,0.3)] flex items-center justify-center gap-2"
           >
             <span>Explore Projects</span>
             <ChevronRight className="w-4 h-4" />
           </Link>
           <Link
             href="/certifications"
-            className="px-6 py-3 rounded-xl glass-panel border border-[#1C2E4A] text-white hover:border-[#38BDF8]/60 hover:text-[#38BDF8] font-orbitron font-semibold text-xs uppercase tracking-wider transition-all"
+            className="w-full sm:w-auto min-h-[44px] px-6 py-3 rounded-xl glass-panel border border-[#1C2E4A] text-white hover:border-[#38BDF8]/60 hover:text-[#38BDF8] font-orbitron font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center"
           >
             View Certifications
           </Link>

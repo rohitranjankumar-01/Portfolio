@@ -1,6 +1,6 @@
 export type ProjectDomain =
   | "Web & Full-Stack"
-  | "AI, Agents & NLP"
+  | "AI & AI Agents"
   | "Data Science & Analytics"
   | "Systems & Security";
 
@@ -21,7 +21,8 @@ export const projectsData: ProjectEntry[] = [
   {
     id: "proj-1",
     title: "ThriftShift",
-    description: "ThriftShift is a modern, full-stack e-commerce web application designed for thrifting. It features a React/Vite frontend powered by a Node.js/Express backend with MongoDB.",
+    description:
+      "An AI-assisted e-commerce web platform engineered for business operations, catalog navigation, and hosting deployment.",
     techStack: ["Node.js", "MongoDB", "Web Development"],
     isAiAssisted: true,
     isTeamProject: false,
@@ -51,7 +52,7 @@ export const projectsData: ProjectEntry[] = [
     techStack: ["HTML", "CSS", "Next.js", "Framer Motion"],
     isAiAssisted: true,
     isTeamProject: false,
-    githubUrl: "https://github.com/rohitranjankumar-01/My-Portfolio-Website",
+    githubUrl: "https://github.com/rohitranjankumar-01/Portfolio",
     isPrivateRepo: false,
     liveUrl: "https://rohitranjankumar.vercel.app/",
     domain: "Web & Full-Stack",
@@ -61,13 +62,13 @@ export const projectsData: ProjectEntry[] = [
     title: "DocSensei",
     description:
       "An intelligent document processing and querying platform powered by LLM agents.",
-    techStack: ["Python", "LLM", "RAG", "AI Agents"],
+    techStack: ["Python", "LLM", "RAG", "AI Agents", "Deep Learning"],
     isAiAssisted: true,
     isTeamProject: true,
     githubUrl: "https://github.com/rohitranjankumar-01/DocSensei",
     isPrivateRepo: false,
     liveUrl: "https://docsensei.streamlit.app/",
-    domain: "AI, Agents & NLP",
+    domain: "AI & AI Agents",
   },
   {
     id: "proj-5",
@@ -80,7 +81,7 @@ export const projectsData: ProjectEntry[] = [
     githubUrl: "https://github.com/rohitranjankumar-01/GeminiAPI_Chat_Bot",
     isPrivateRepo: false,
     liveUrl: "",
-    domain: "AI, Agents & NLP",
+    domain: "AI & AI Agents",
   },
   {
     id: "proj-6",
@@ -105,13 +106,13 @@ export const projectsData: ProjectEntry[] = [
   },
   {
     id: "proj-7",
-    title: "Bitcoin History Analysis",
+    title: "BitcoinHistoryAnalysis",
     description:
       "An end-to-end data analytics project examining historical volatility and trend patterns using Python, Pandas, NumPy, and Seaborn.",
     techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
     isAiAssisted: false,
     isTeamProject: true,
-    githubUrl: "https://github.com/rohitranjankumar-01/Bitcoin-History-Analysis-ACap-Stone-Project",
+    githubUrl: "https://github.com/rohitranjankumar-01/Bitcoin-History-Analysis",
     isPrivateRepo: false,
     liveUrl:
       "https://colab.research.google.com/github/rohitranjankumar-01/Bitcoin-History-Analysis-ACap-Stone-Project/blob/main/BitcoinDataAnalysis.ipynb",

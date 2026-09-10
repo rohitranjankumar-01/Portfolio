@@ -2,9 +2,12 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import HeroScrollCanvas from "@/components/HeroScrollCanvas";
 import SimpleFooter from "@/components/SimpleFooter";
-import { GraduationCap, Briefcase, FolderGit2, Award, Terminal, ArrowRight, Cpu, FileText } from "lucide-react";
+import { GraduationCap, Briefcase, FolderGit2, Award, Cpu, FileText, Mail, MonitorCog, ArrowRight } from "lucide-react";
+import { certificationsData } from "@/data/certificationsData";
 
 export default function Home() {
+  const credentialCount = certificationsData.length;
+
   const portalCards = [
     {
       title: "ACADEMICS & TRANSCRIPTS",
@@ -39,12 +42,12 @@ export default function Home() {
       desc: "Proctored Oracle AI, Java, DSA credentials, hackathon awards & image inspection.",
       icon: <Award className="w-6 h-6 text-[#38BDF8]" />,
       href: "/certifications",
-      badge: "10 Credentials",
+      badge: `${credentialCount} Credentials`,
     },
     {
-      title: "DEVELOPER HUD",
+      title: "SKILLS HUD",
       desc: "Interactive capability matrix detailing languages, frameworks, soft skills & platforms.",
-      icon: <Terminal className="w-6 h-6 text-[#0284C7]" />,
+      icon: <MonitorCog className="w-6 h-6 text-[#0284C7]" />,
       href: "/skills",
       badge: "Skill Matrix",
     },
@@ -54,6 +57,13 @@ export default function Home() {
       icon: <FileText className="w-6 h-6 text-[#38BDF8]" />,
       href: "/resume",
       badge: "Verified CV",
+    },
+    {
+      title: "CONTACT",
+      desc: "Reach out via email or connect on LinkedIn, GitHub, Instagram & Facebook.",
+      icon: <Mail className="w-6 h-6 text-[#0284C7]" />,
+      href: "/contact",
+      badge: "Get In Touch",
     },
   ];
 
@@ -71,11 +81,13 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* flex-wrap + justify-center = last-row cards always centred */}
+          <div className="flex flex-wrap justify-center gap-6">
             {portalCards.map((portal) => (
               <Link
                 key={portal.title}
                 href={portal.href}
+                style={{ flexBasis: "calc(33.333% - 1.5rem)", minWidth: "260px", maxWidth: "380px" }}
                 className="glass-card p-6 rounded-2xl border border-[#1C2E4A] hover:border-[#38BDF8]/50 transition-all group flex flex-col justify-between"
               >
                 <div>

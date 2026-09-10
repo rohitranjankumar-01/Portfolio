@@ -53,7 +53,7 @@ export const projectsData: ProjectEntry[] = [
     isTeamProject: false,
     githubUrl: "https://github.com/rohitranjankumar-01/My-Portfolio-Website",
     isPrivateRepo: false,
-    liveUrl: "",
+    liveUrl: "https://rohitranjankumar.vercel.app/",
     domain: "Web & Full-Stack",
   },
   {

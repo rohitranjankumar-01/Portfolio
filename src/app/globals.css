@@ -42,21 +42,21 @@
 
 .glass-card:hover {
   border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.10);
   transform: translateY(-2px);
 }
 
 /* Neon Glows & Accents */
 .text-glow-cyan {
-  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6), 0 0 24px rgba(56, 189, 248, 0.3);
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.48), 0 0 24px rgba(56, 189, 248, 0.24);
 }
 
 .text-glow-violet {
-  text-shadow: 0 0 12px rgba(2, 132, 199, 0.6), 0 0 24px rgba(2, 132, 199, 0.3);
+  text-shadow: 0 0 12px rgba(2, 132, 199, 0.48), 0 0 24px rgba(2, 132, 199, 0.24);
 }
 
 .border-glow-cyan {
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.20);
 }
 
 /* Custom Scrollbar */

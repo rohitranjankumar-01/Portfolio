@@ -172,7 +172,7 @@ export default function HeroScrollCanvas() {
         >
           <Link
             href="/projects"
-            className="w-full sm:w-auto min-h-[44px] px-6 py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_25px_rgba(56,189,248,0.3)] flex items-center justify-center gap-2"
+            className="w-full sm:w-auto min-h-[44px] px-6 py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_25px_rgba(56,189,248,0.24)] flex items-center justify-center gap-2"
           >
             <span>Explore Projects</span>
             <ChevronRight className="w-4 h-4" />

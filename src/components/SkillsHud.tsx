@@ -48,7 +48,7 @@ export default function SkillsHud() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card rounded-2xl border border-[#38BDF8]/30 overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.06)]"
+          className="glass-card rounded-2xl border border-[#38BDF8]/30 overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.05)]"
         >
           {/* Terminal Window Titlebar */}
           <div className="px-4 sm:px-6 py-3 bg-[#111D30] border-b border-[#1C2E4A] flex items-center justify-between">
@@ -76,7 +76,7 @@ export default function SkillsHud() {
                   onClick={() => setActiveTab(idx)}
                   className={`p-3 rounded-xl border text-xs font-orbitron text-left transition-all flex items-center gap-2.5 cursor-pointer min-h-[44px] ${
                     activeTab === idx
-                      ? "bg-[#38BDF8]/10 border-[#38BDF8] text-[#38BDF8] shadow-[0_0_15px_rgba(56,189,248,0.2)]"
+                      ? "bg-[#38BDF8]/10 border-[#38BDF8] text-[#38BDF8] shadow-[0_0_15px_rgba(56,189,248,0.16)]"
                       : "bg-[#111D30] border-[#1C2E4A] text-[#7E92AB] hover:border-[#38BDF8]/40 hover:text-white"
                   }`}
                 >
@@ -100,7 +100,7 @@ export default function SkillsHud() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: sIdx * 0.05 }}
-                    className="px-4 py-2 rounded-xl bg-[#111D30] border border-[#1C2E4A] text-sm font-mono text-[#E2E8F0] hover:border-[#38BDF8]/60 hover:text-[#38BDF8] hover:shadow-[0_0_15px_rgba(56,189,248,0.15)] transition-all flex items-center gap-2 group cursor-default"
+                    className="px-4 py-2 rounded-xl bg-[#111D30] border border-[#1C2E4A] text-sm font-mono text-[#E2E8F0] hover:border-[#38BDF8]/60 hover:text-[#38BDF8] hover:shadow-[0_0_15px_rgba(56,189,248,0.10)] transition-all flex items-center gap-2 group cursor-default"
                   >
                     <CheckCircle2 className="w-4 h-4 text-[#38BDF8] group-hover:scale-110 transition-transform" />
                     <span>{skill}</span>

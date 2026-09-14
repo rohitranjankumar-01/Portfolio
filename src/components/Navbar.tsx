@@ -49,7 +49,7 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 group cursor-pointer shrink-0"
         >
-          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#111D30] border border-[#38BDF8]/40 flex items-center justify-center group-hover:border-[#38BDF8] group-hover:shadow-[0_0_15px_rgba(56,189,248,0.35)] transition-all">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#111D30] border border-[#38BDF8]/40 flex items-center justify-center group-hover:border-[#38BDF8] group-hover:shadow-[0_0_15px_rgba(56,189,248,0.28)] transition-all">
             <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-[#38BDF8]" />
           </div>
           <span className="font-orbitron font-bold text-[11px] sm:text-xs md:text-sm tracking-wider text-white group-hover:text-[#38BDF8] transition-colors whitespace-nowrap">
@@ -67,7 +67,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-2 xl:px-2.5 py-1 text-[10px] xl:text-[11px] font-orbitron uppercase tracking-wider rounded-full transition-all relative ${
                   isActive
-                    ? "text-[#0B1320] font-bold bg-gradient-to-r from-[#38BDF8] to-[#0284C7] shadow-[0_0_15px_rgba(56,189,248,0.35)]"
+                    ? "text-[#0B1320] font-bold bg-gradient-to-r from-[#38BDF8] to-[#0284C7] shadow-[0_0_15px_rgba(56,189,248,0.28)]"
                     : "text-slate-300 hover:text-[#38BDF8] hover:bg-[#38BDF8]/10"
                 }`}
               >

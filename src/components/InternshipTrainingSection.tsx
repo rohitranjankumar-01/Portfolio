@@ -33,7 +33,7 @@ export default function InternshipTrainingSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel border border-[#38BDF8]/30 text-xs font-mono uppercase text-[#38BDF8] mb-3 shadow-[0_0_15px_rgba(56,189,248,0.15)]"
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel border border-[#38BDF8]/30 text-xs font-mono uppercase text-[#38BDF8] mb-3 shadow-[0_0_15px_rgba(56,189,248,0.10)]"
           >
             <Terminal className="w-4 h-4" />
             <span>Practical Experience &amp; Specialization</span>
@@ -62,7 +62,7 @@ export default function InternshipTrainingSection() {
               onClick={() => setSelectedTab("all")}
               className={`px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-orbitron uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
                 selectedTab === "all"
-                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.24)]"
                   : "text-[#7E92AB] hover:text-white hover:bg-[#1C2E4A]/50"
               }`}
             >
@@ -74,7 +74,7 @@ export default function InternshipTrainingSection() {
               onClick={() => setSelectedTab("internships")}
               className={`px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-orbitron uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
                 selectedTab === "internships"
-                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.24)]"
                   : "text-[#7E92AB] hover:text-white hover:bg-[#1C2E4A]/50"
               }`}
             >
@@ -86,7 +86,7 @@ export default function InternshipTrainingSection() {
               onClick={() => setSelectedTab("training")}
               className={`px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-orbitron uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
                 selectedTab === "training"
-                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.24)]"
                   : "text-[#7E92AB] hover:text-white hover:bg-[#1C2E4A]/50"
               }`}
             >

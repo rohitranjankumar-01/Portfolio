@@ -100,7 +100,7 @@ export default function ProjectLiveFrame({ project }: ProjectLiveFrameProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(56,189,248,0.2)]"
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(56,189,248,0.16)]"
             >
               <span>Launch Live Platform</span>
               <ExternalLink className="w-3.5 h-3.5" />
@@ -150,7 +150,7 @@ export default function ProjectLiveFrame({ project }: ProjectLiveFrameProps) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-[0_0_15px_rgba(56,189,248,0.15)]"
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-[0_0_15px_rgba(56,189,248,0.10)]"
             >
               <Github className="w-3.5 h-3.5" />
               <span>View GitHub Repository</span>

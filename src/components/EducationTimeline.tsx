@@ -107,7 +107,7 @@ export default function EducationTimeline() {
                   {item.marksheetImages && item.marksheetImages.length > 0 && (
                     <button
                       onClick={() => openMarksheet(item.degreeName, item.marksheetImages!)}
-                      className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#38BDF8]/20 to-[#0284C7]/20 border border-[#38BDF8]/50 text-xs font-mono font-bold text-white hover:text-[#38BDF8] hover:border-[#38BDF8] transition-all flex items-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(56,189,248,0.12)]"
+                      className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#38BDF8]/20 to-[#0284C7]/20 border border-[#38BDF8]/50 text-xs font-mono font-bold text-white hover:text-[#38BDF8] hover:border-[#38BDF8] transition-all flex items-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(56,189,248,0.10)]"
                     >
                       <FileText className="w-4 h-4 text-[#38BDF8]" />
                       <span>View Official Marksheet</span>
@@ -134,7 +134,7 @@ export default function EducationTimeline() {
                         onClick={() => setActiveSemTab(sem.semester)}
                         className={`px-4 py-2 rounded-xl text-xs font-orbitron transition-all cursor-pointer ${
                           activeSemTab === sem.semester
-                            ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_15px_rgba(56,189,248,0.25)]"
+                            ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_15px_rgba(56,189,248,0.20)]"
                             : "bg-[#111D30] border border-[#1C2E4A] text-slate-400 hover:text-white"
                         }`}
                       >
@@ -223,7 +223,7 @@ export default function EducationTimeline() {
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative max-w-3xl w-full bg-[#111D30] rounded-3xl border border-[#38BDF8]/40 overflow-hidden shadow-[0_0_60px_rgba(56,189,248,0.12)]"
+            className="relative max-w-3xl w-full bg-[#111D30] rounded-3xl border border-[#38BDF8]/40 overflow-hidden shadow-[0_0_60px_rgba(56,189,248,0.10)]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
@@ -278,7 +278,7 @@ export default function EducationTimeline() {
                       onClick={() => setSelectedMarksheet((s) => s ? { ...s, page: i } : s)}
                       className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
                         i === selectedMarksheet.page
-                          ? "bg-[#38BDF8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"
+                          ? "bg-[#38BDF8] shadow-[0_0_8px_rgba(56,189,248,0.48)]"
                           : "bg-[#1C2E4A]"
                       }`}
                     />

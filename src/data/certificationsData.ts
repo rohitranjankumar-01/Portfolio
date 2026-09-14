@@ -12,6 +12,7 @@ export interface CertificationEntry {
   category: CertCategory;
   imagePath: string; // e.g. /Image/OCI-Foundation.jpeg
   isProctored?: boolean;
+  credentialLink?: string; // URL to verify the credential online
 }
 
 export const certificationsData: CertificationEntry[] = [
@@ -23,6 +24,8 @@ export const certificationsData: CertificationEntry[] = [
     category: "Certification",
     imagePath: "/Image/OCI-Foundation.jpeg",
     isProctored: true,
+    credentialLink:
+      "https://catalog-education.oracle.com/ords/certview/sharebadge?id=EE09A343D06646472724E9CE55E8E7CE65A8440E7785882C6B16E7842496EFE7",
   },
   {
     id: "cert-dbms",
@@ -32,6 +35,7 @@ export const certificationsData: CertificationEntry[] = [
     category: "Certificates",
     imagePath: "/Image/DBMS.jpg",
     isProctored: false,
+    credentialLink: "https://verify.onwingspan.com/",
   },
   {
     id: "cert-2",
@@ -41,6 +45,8 @@ export const certificationsData: CertificationEntry[] = [
     category: "Certificates",
     imagePath: "/Image/ProgrammingInJava.jpg",
     isProctored: true,
+    credentialLink:
+      "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2FHXOmpLuD4AQnwMso9MMJ98t5DwW1PlRg%3D",
   },
   {
     id: "cert-3",
@@ -50,6 +56,8 @@ export const certificationsData: CertificationEntry[] = [
     category: "Certificates",
     imagePath: "/Image/DSA.jpg",
     isProctored: true,
+    credentialLink:
+      "https://lpucolab438.examly.io/certificate/U2FsdGVkX19MIlFtK5cywLfpAYMIQkYXzl2qWxAsW4A%3D",
   },
   {
     id: "cert-4",
@@ -59,6 +67,8 @@ export const certificationsData: CertificationEntry[] = [
     category: "Certificates",
     imagePath: "/Image/ObjectOrientedProgramming.png",
     isProctored: true,
+    credentialLink:
+      "https://lpucolab438.examly.io/certificate/U2FsdGVkX1%2FGkl9ikpoa4FNg%2FO3C9KL7LO%2FrxbzRI8Y%3D",
   },
   {
     id: "cert-cp",
@@ -68,6 +78,8 @@ export const certificationsData: CertificationEntry[] = [
     category: "Certificates",
     imagePath: "/Image/ComputerProgramming.jpg",
     isProctored: true,
+    credentialLink:
+      "https://lpucolab438.examly.io/certificate/U2FsdGVkX19LGElcRX3hL2054NA2Qj5o0MIQQ1f4yWY%3D",
   },
   {
     id: "cert-5",
@@ -95,6 +107,8 @@ export const certificationsData: CertificationEntry[] = [
     category: "Hackathon",
     imagePath: "/Image/Trinetra_Hackathon.jpg",
     isProctored: false,
+    credentialLink:
+      "https://credsverse.com/credentials/4948d3c4-d08a-4a20-a95a-0fadbb549574?preview=1",
   },
   {
     id: "cert-8",
@@ -123,5 +137,7 @@ export const certificationsData: CertificationEntry[] = [
     category: "Soft Skills",
     imagePath: "/Image/Udemy-TheAuthenticConfidence.jpg",
     isProctored: false,
+    credentialLink:
+      "https://www.udemy.com/certificate/UC-c14350d7-8a22-4d54-a614-95f1389f8beb/",
   },
 ];

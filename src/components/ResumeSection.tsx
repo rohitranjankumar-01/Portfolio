@@ -77,7 +77,7 @@ export default function ResumeSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel border border-[#38BDF8]/30 text-xs font-mono uppercase text-[#38BDF8] mb-3 shadow-[0_0_15px_rgba(56,189,248,0.15)]"
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-panel border border-[#38BDF8]/30 text-xs font-mono uppercase text-[#38BDF8] mb-3 shadow-[0_0_15px_rgba(56,189,248,0.10)]"
           >
             <ShieldCheck className="w-4 h-4 text-[#38BDF8]" />
             <span>Document &amp; Credentials</span>
@@ -99,7 +99,7 @@ export default function ResumeSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="glass-card rounded-2xl border border-[#38BDF8]/30 overflow-hidden shadow-[0_0_50px_rgba(56,189,248,0.08)]"
+          className="glass-card rounded-2xl border border-[#38BDF8]/30 overflow-hidden shadow-[0_0_50px_rgba(56,189,248,0.06)]"
         >
           {/* Terminal Title Bar */}
           <div className="px-6 py-3.5 bg-[#111D30] border-b border-[#1C2E4A] flex flex-wrap items-center justify-between gap-3">
@@ -135,7 +135,7 @@ export default function ResumeSection() {
                 <div className="lg:col-span-7 flex flex-col items-center">
                   <div
                     onClick={handleOpenModal}
-                    className="group relative w-full max-w-md aspect-[1/1.414] bg-[#0A101D] rounded-xl overflow-hidden border border-[#1C2E4A] hover:border-[#38BDF8]/60 transition-all duration-300 shadow-[0_0_30px_rgba(0,0,0,0.5)] cursor-pointer hover:shadow-[0_0_35px_rgba(56,189,248,0.2)]"
+                    className="group relative w-full max-w-md aspect-[1/1.414] bg-[#0A101D] rounded-xl overflow-hidden border border-[#1C2E4A] hover:border-[#38BDF8]/60 transition-all duration-300 shadow-[0_0_30px_rgba(0,0,0,0.40)] cursor-pointer hover:shadow-[0_0_35px_rgba(56,189,248,0.16)]"
                   >
                     {/* CV Image Preview */}
                     <Image
@@ -149,7 +149,7 @@ export default function ResumeSection() {
 
                     {/* Hover Overlay with Action Cue */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B1320]/90 via-[#0B1320]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-6 text-center">
-                      <div className="px-4 py-2 rounded-xl bg-[#38BDF8] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-[0_0_20px_rgba(56,189,248,0.5)] transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      <div className="px-4 py-2 rounded-xl bg-[#38BDF8] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-[0_0_20px_rgba(56,189,248,0.40)] transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                         <Eye className="w-4 h-4" />
                         <span>Click to Expand &amp; Inspect</span>
                       </div>
@@ -211,7 +211,7 @@ export default function ResumeSection() {
                     <a
                       href={resumeData.imageUrl}
                       download="Rohit_Ranjan_Kumar_CV.jpg"
-                      className="w-full py-3 px-5 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all shadow-[0_0_25px_rgba(56,189,248,0.3)] flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-3 px-5 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-95 transition-all shadow-[0_0_25px_rgba(56,189,248,0.24)] flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <Download className="w-4 h-4" />
                       <span>Download CV Document</span>
@@ -251,7 +251,7 @@ export default function ResumeSection() {
             ) : (
               /* Fallback if not uploaded */
               <div className="text-center flex flex-col items-center py-8">
-                <div className="w-16 h-16 rounded-2xl bg-[#111D30] border border-[#1C2E4A] flex items-center justify-center text-[#38BDF8] mb-6 shadow-[0_0_20px_rgba(56,189,248,0.1)]">
+                <div className="w-16 h-16 rounded-2xl bg-[#111D30] border border-[#1C2E4A] flex items-center justify-center text-[#38BDF8] mb-6 shadow-[0_0_20px_rgba(56,189,248,0.08)]">
                   <FileText className="w-8 h-8" />
                 </div>
 
@@ -270,7 +270,7 @@ export default function ResumeSection() {
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   <a
                     href={`mailto:${personalData.email}`}
-                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_20px_rgba(56,189,248,0.3)] flex items-center gap-2"
+                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_20px_rgba(56,189,248,0.24)] flex items-center gap-2"
                   >
                     <Mail className="w-4 h-4" />
                     <span>Request via Email</span>
@@ -308,7 +308,7 @@ export default function ResumeSection() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative max-w-5xl w-full max-h-[92vh] flex flex-col glass-card border border-[#38BDF8]/40 rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(56,189,248,0.25)]"
+              className="relative max-w-5xl w-full max-h-[92vh] flex flex-col glass-card border border-[#38BDF8]/40 rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(56,189,248,0.20)]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Top Control Bar */}

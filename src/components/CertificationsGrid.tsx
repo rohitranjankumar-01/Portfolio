@@ -10,6 +10,7 @@ import {
   Maximize2,
   X,
   CheckCircle2,
+  ExternalLink,
 } from "lucide-react";
 import {
   certificationsData,
@@ -58,7 +59,7 @@ export default function CertificationsGrid() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-xl text-xs font-orbitron uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.24)]"
                   : "glass-panel border border-[#1C2E4A] text-[#7E92AB] hover:text-white hover:border-[#38BDF8]/40"
               }`}
             >
@@ -89,7 +90,7 @@ export default function CertificationsGrid() {
                         {cert.category}
                       </span>
                       {cert.isProctored && (
-                        <span className="px-3 py-1 rounded-full bg-[#38BDF8]/15 border border-[#38BDF8]/40 text-xs font-mono text-[#38BDF8] flex items-center gap-1.5 shadow-[0_0_10px_rgba(56,189,248,0.15)]">
+                        <span className="px-3 py-1 rounded-full bg-[#38BDF8]/15 border border-[#38BDF8]/40 text-xs font-mono text-[#38BDF8] flex items-center gap-1.5 shadow-[0_0_10px_rgba(56,189,248,0.12)]">
                           <ShieldCheck className="w-3.5 h-3.5 text-[#38BDF8]" />
                           <span>Proctored Exam Passed</span>
                         </span>
@@ -125,15 +126,26 @@ export default function CertificationsGrid() {
                     </p>
                   </div>
 
-                  {/* Action Button */}
-                  <div>
+                  {/* Action Buttons */}
+                  <div className="flex flex-wrap items-center gap-3">
                     <button
                       onClick={() => setSelectedCert(cert)}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_20px_rgba(56,189,248,0.25)] cursor-pointer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-orbitron font-bold text-xs uppercase tracking-wider hover:opacity-90 transition-all shadow-[0_0_20px_rgba(56,189,248,0.20)] cursor-pointer"
                     >
                       <Maximize2 className="w-4 h-4" />
                       <span>Inspect Credential Image</span>
                     </button>
+                    {cert.credentialLink && (
+                      <a
+                        href={cert.credentialLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-[#38BDF8]/50 text-[#38BDF8] font-orbitron font-bold text-xs uppercase tracking-wider hover:bg-[#38BDF8]/10 hover:border-[#38BDF8] transition-all cursor-pointer"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span>Verify Credential</span>
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -187,6 +199,17 @@ export default function CertificationsGrid() {
                 <p className="text-sm font-mono text-[#7E92AB]">
                   Issued by {selectedCert.issuer} • {selectedCert.date}
                 </p>
+                {selectedCert.credentialLink && (
+                  <a
+                    href={selectedCert.credentialLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-xl border border-[#38BDF8]/50 text-[#38BDF8] font-orbitron font-bold text-xs uppercase tracking-wider hover:bg-[#38BDF8]/10 hover:border-[#38BDF8] transition-all w-fit"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>Verify Credential</span>
+                  </a>
+                )}
               </div>
 
               {/* Full Image Container */}

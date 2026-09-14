@@ -53,7 +53,7 @@ export default function ModularProjectGrid() {
               onClick={() => setActiveDomain(dom)}
               className={`px-4 py-2 rounded-xl text-xs font-orbitron uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 activeDomain === dom
-                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+                  ? "bg-gradient-to-r from-[#38BDF8] to-[#0284C7] text-[#0B1320] font-bold shadow-[0_0_20px_rgba(56,189,248,0.24)]"
                   : "glass-panel border border-[#1C2E4A] text-[#7E92AB] hover:text-white hover:border-[#38BDF8]/40"
               }`}
             >
@@ -85,7 +85,7 @@ export default function ModularProjectGrid() {
                       </span>
 
                       {project.isAiAssisted && (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#38BDF8]/15 border border-[#38BDF8]/40 text-[#38BDF8] text-xs font-mono shadow-[0_0_10px_rgba(56,189,248,0.15)]">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#38BDF8]/15 border border-[#38BDF8]/40 text-[#38BDF8] text-xs font-mono shadow-[0_0_10px_rgba(56,189,248,0.12)]">
                           <Sparkles className="w-3.5 h-3.5" />
                           <span>AI-Assisted</span>
                         </span>
@@ -162,7 +162,7 @@ export default function ModularProjectGrid() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-[#38BDF8]/20 to-[#0284C7]/20 border border-[#38BDF8]/60 text-xs font-orbitron font-semibold text-white hover:text-[#38BDF8] hover:border-[#38BDF8] transition-all shadow-[0_0_15px_rgba(56,189,248,0.15)]"
+                        className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-[#38BDF8]/20 to-[#0284C7]/20 border border-[#38BDF8]/60 text-xs font-orbitron font-semibold text-white hover:text-[#38BDF8] hover:border-[#38BDF8] transition-all shadow-[0_0_15px_rgba(56,189,248,0.10)]"
                       >
                         <span>Launch Live Platform</span>
                         <ExternalLink className="w-4 h-4" />

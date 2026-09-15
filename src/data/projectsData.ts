@@ -22,7 +22,7 @@ export const projectsData: ProjectEntry[] = [
     id: "proj-1",
     title: "ThriftShift",
     description:
-      "An AI-assisted e-commerce web platform engineered for business operations, catalog navigation, and hosting deployment.",
+      "ThriftShift is a modern, full-stack e-commerce web application designed for thrifting. It features a React/Vite frontend powered by a Node.js/Express backend with MongoDB.",
     techStack: ["Node.js", "MongoDB", "Web Development"],
     isAiAssisted: true,
     isTeamProject: false,
@@ -35,7 +35,7 @@ export const projectsData: ProjectEntry[] = [
     id: "proj-2",
     title: "InvoiceFlow",
     description:
-      "Full-stack invoice generator — glassmorphism UI, PDF generation, email delivery, client management & dashboard. Built with React + Node.js.",
+      "Full-stack invoice generator — glassmorphism UI, PDF generation, email delivery, client management & dashboard. Built with React + Node.js. Free to host on Render.",
     techStack: ["HTML", "CSS", "Next.js", "Framer Motion"],
     isAiAssisted: true,
     isTeamProject: false,
@@ -46,9 +46,9 @@ export const projectsData: ProjectEntry[] = [
   },
   {
     id: "proj-3",
-    title: "My-Portfolio-Website",
+    title: "Portfolio",
     description:
-      "A high-performance personal portfolio website built with Next.js, Framer Motion, and scroll-driven storytelling components.",
+      "Modern, high-performance personal portfolio website built with Next.js, Framer Motion, and scroll-driven storytelling components showcasing Data Science, Data Engineering, and Full-Stack projects.",
     techStack: ["HTML", "CSS", "Next.js", "Framer Motion"],
     isAiAssisted: true,
     isTeamProject: false,
@@ -61,8 +61,8 @@ export const projectsData: ProjectEntry[] = [
     id: "proj-4",
     title: "DocSensei",
     description:
-      "An intelligent document processing and querying platform powered by LLM agents.",
-    techStack: ["Python", "LLM", "RAG", "AI Agents", "Deep Learning"],
+      "DocSensei is a production-grade, modular Retrieval-Augmented Generation (RAG) platform optimized for processing educational curriculum materials and enterprise documents without data leakages or citation hallucinations.",
+    techStack: ["Python", "LLM", "RAG", "AI Agents"],
     isAiAssisted: true,
     isTeamProject: true,
     githubUrl: "https://github.com/rohitranjankumar-01/DocSensei",
@@ -74,7 +74,7 @@ export const projectsData: ProjectEntry[] = [
     id: "proj-5",
     title: "Gemini_API_Chatbot",
     description:
-      "A conversational agent leveraging Google's Gemini API for multi-turn contextual dialogues.",
+      "A lightweight Python application that sends text prompts from a file to Google's Gemini API (google-genai SDK) and prints AI responses.",
     techStack: ["Python", "Gemini API"],
     isAiAssisted: false,
     isTeamProject: false,
@@ -87,7 +87,7 @@ export const projectsData: ProjectEntry[] = [
     id: "proj-6",
     title: "Global Health Expenditure vs. Mortality Outcome",
     description:
-      "A multi-indicator descriptive analytics project analyzing the 2005–2024 longitudinal relationship between national health financing models, catastrophic expenditure, and public health mortality outcomes using World Bank and WHO datasets.",
+      "Descriptive analytics study exploring how government vs. out-of-pocket health spending impacts mortality rates across 200+ countries (2005–2024) — featuring efficiency frontiers, urban-rural gap analysis, and an interactive Power BI dashboard. Built with Python, Pandas, Seaborn & SciPy. A Descriptive analytics project.",
     techStack: [
       "Python",
       "Jupyter Notebook",
@@ -108,7 +108,7 @@ export const projectsData: ProjectEntry[] = [
     id: "proj-7",
     title: "BitcoinHistoryAnalysis",
     description:
-      "An end-to-end data analytics project examining historical volatility and trend patterns using Python, Pandas, NumPy, and Seaborn.",
+      "Capstone project analyzing historical Bitcoin market data to uncover price patterns, volatility, and momentum using Python, Pandas, NumPy, and SMA technical indicators.",
     techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
     isAiAssisted: false,
     isTeamProject: true,
@@ -122,7 +122,7 @@ export const projectsData: ProjectEntry[] = [
     id: "proj-8",
     title: "Secure-File-Management System",
     description:
-      "A robust system focused on encrypted file storage, access control, and secure data handling.",
+      "SecureFS: A secure file management system implementing AES-128 encryption, TOTP 2FA, access control, and audit logging. Developed as an OS security project.",
     techStack: ["Encryption", "Access Control", "Security Protocols"],
     isAiAssisted: true,
     isTeamProject: true,
